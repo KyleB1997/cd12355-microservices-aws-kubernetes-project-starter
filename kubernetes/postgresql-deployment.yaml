@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: postgresql
-        image: 372385315342.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
+        image: postgres:latest #372385315342.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
         imagePullPolicy: Always
         env:
         - name: DB_NAME
