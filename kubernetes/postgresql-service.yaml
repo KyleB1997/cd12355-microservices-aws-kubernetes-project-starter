@@ -4,8 +4,8 @@ metadata:
   name: postgresql-service
 spec:
   ports:
-  - port: 5153
-    targetPort: 5153
+  - port: 5432
+    targetPort: 5432
   selector:
     app: postgresql
   type: LoadBalancer
