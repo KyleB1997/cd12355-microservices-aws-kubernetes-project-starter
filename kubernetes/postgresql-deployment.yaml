@@ -13,17 +13,16 @@ spec:
     spec:
       containers:
       - name: postgresql
-        image: postgres:latest #372385315342.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
-        imagePullPolicy: Always
+        image: postgres:latest
         env:
-        - name: DB_NAME
+        - name: POSTGRES_DB
           value: mydatabase
-        - name: DB_USERNAME
+        - name: POSTGRES_USER
           value: myuser
-        - name: DB_PASSWORD
+        - name: POSTGRES_PASSWORD
           value: mypassword
         ports:
-        - containerPort: 5153
+        - containerPort: 5432
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: postgresql-storage
