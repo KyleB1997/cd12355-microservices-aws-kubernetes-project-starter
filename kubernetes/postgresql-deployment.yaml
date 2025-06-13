@@ -16,11 +16,11 @@ spec:
         image: 372385315342.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
         imagePullPolicy: Always
         env:
-        - name: POSTGRES_DB
+        - name: DB_NAME
           value: mydatabase
-        - name: POSTGRES_USER
+        - name: DB_USERNAME
           value: myuser
-        - name: POSTGRES_PASSWORD
+        - name: DB_PASSWORD
           value: mypassword
         ports:
         - containerPort: 5153
